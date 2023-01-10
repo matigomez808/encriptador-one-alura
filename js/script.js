@@ -13,13 +13,6 @@ const vector = document.querySelector(".vector");
 cajaResultados.style.display = "none";
 botonCopiar.style.display = "none";
 
-var estarListo 
-
-if (estarListo === false || estarListo === true){
-    estarListo.leap()
-    alert("Estás listo!")
-}
-
 function encriptar(){
     cadena = document.getElementById("caja_principal").value;
     if (cadena === "" || validar(cadena) == false){
