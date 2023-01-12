@@ -57,16 +57,29 @@ function decodifica(cadena){
 
 
 function validar(cadena){
-    let regex = /[^a-zñ\s]/g;
-    if (cadena.match(regex) == null){
-        return true;
-    } else {
+    // let regex = /[^a-zñ\s]/g;
+    // if (cadena.match(regex) == null){
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+    let cadena2 = cadena.toLowerCase();
+    if ((cadena.search("á") == -1) &&
+        (cadena.search("é") == -1) &&
+        (cadena.search("í") == -1) &&
+        (cadena.search("ó") == -1) &&
+        (cadena.search("ú") == -1) &&
+        (cadena2 === cadena)
+    ) return true;
+    else {
         return false;
     }
+    
+    
     
 }
 function copiar() {
     let copyText = document.querySelector(".texto_encriptado").innerHTML;
     navigator.clipboard.writeText(copyText);
-    alert("Resultado copiado con éxito!")    
+    alert("Resultado copiado con éxito!")
 }
