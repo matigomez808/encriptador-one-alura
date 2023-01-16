@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./js/script.js" defer></script>
+    <title>Alura Challenge - Encriptador</title>
+</head>
+<body>
+    <div class="todo">
+        <header class="encabezado">
+            <div class="logo">
+                <img src="./assets/Vector(1).png" alt="logo de alura">
+            </div>
+            
+        </header>
+        <main class="cuerpo">
+            <div class="container_a">
+                <textarea class="caja_texto" name="" id="caja_principal" cols="40" rows="10" wrap="soft" placeholder="Escriba el texo a encriptar"></textarea>
+                <div class="aviso">
+                    <p class="aviso">/* solo letras minusculas y sin tildes */</p>
+                </div>
+                <div class="caja_botones">
+                    
+                    <button class="encriptar" id="encriptar" onclick="encriptar()">Encriptar!</button>
+                    <button class="desencriptar" id="desencriptar" onclick="desencriptar()">Desencriptar!</button>
+                </div>
+            </div>
+            <div class="container_b">
+                <div class="vector">
+                    <img src="./assets/Vector.png" alt="imagen de una persona haciendo cosas">
+                </div>
+                <div class="mensajes_pre_click">
+                    <h2 class="mensaje1">Ningun mensaje encontrado</h2>
+                    <h3 class="mensaje2">Ingresa el texto que desees encriptar o desencriptar</h3>
+                </div>
+                <div  class="resultados">
+                    <h3 id="resultados" class="texto_encriptado">Aca iria el texto</h3>
+                </div>
+                <div class="caja_boton_copiar">
+                    <button class="copiar" onclick="copiar()">Copiar resultado</button>
+                </div>
+                
+                
+            </div>
+        </main>
+        <footer class="pie">
+            <p>Desarrollado por Matias Gomez // ONE + Alura Challenge </p>
+            <div class="iconos_footer">
+                <a href="https://www.linkedin.com/in/matias-gomez-devww/" target="_blank"><img src="/src/assets/icons/icons8-linkedin-material-filled/icons8-linkedin-24.png" alt=""></a>
+                <a href="https://github.com/matigomez808" target="_blank"><img src="/src/assets/icons/icons8-github-material-filled/icons8-github-24.png" alt=""></a>
+                <a href="https://www.instagram.com/matigomez808/" target="_blank"><img src="/src/assets/icons/icons8-instagram-material-filled/icons8-instagram-24.png" alt=""></a>
+            </div>
+            <p>Icons by <a target="_blank" href="https://icons8.com">Icons8</a></p>        
+        </footer>
+    </div>
+</body>
+</html>
