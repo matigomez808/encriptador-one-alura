@@ -63,23 +63,45 @@ function validar(cadena){
     // } else {
     //     return false;
     // }
+    // if ((cadena.search("á") == -1) &&
+    //     (cadena.search("é") == -1) &&
+    //     (cadena.search("í") == -1) &&
+    //     (cadena.search("ó") == -1) &&
+    //     (cadena.search("ú") == -1) &&
+    //     (cadena2 === cadena)
+    // ) return true;
+    // else {
+        //     return false;
+        // }
+    
+    
     let cadena2 = cadena.toLowerCase();
-    if ((cadena.search("á") == -1) &&
-        (cadena.search("é") == -1) &&
-        (cadena.search("í") == -1) &&
-        (cadena.search("ó") == -1) &&
-        (cadena.search("ú") == -1) &&
-        (cadena2 === cadena)
-    ) return true;
-    else {
-        return false;
-    }
-    
-    
-    
+    const prohibidos = [
+        "á",
+        "é",
+        "í",
+        "ó",
+        "ú"
+    ] 
+
+    let caracteres = cadena.split("");
+
+    let valido = true;
+
+    caracteres.forEach(caracter => {
+       if (prohibidos.includes(caracter)) valido = false;
+    }) 
+
+    if (!valido) return false
+
+    if (cadena2 !== cadena) return false
+
+    return true 
 }
+
+
 function copiar() {
     let copyText = document.querySelector(".texto_encriptado").innerHTML;
     navigator.clipboard.writeText(copyText);
-    alert("Resultado copiado con éxito!")
+    alert("Resultado copiado con éxito!");
 }
