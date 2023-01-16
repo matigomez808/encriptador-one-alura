@@ -1,17 +1,17 @@
 body{
     font-family: sans-serif;
-    background: #A97C73;
+    background: #E9ECF8;
 }
 .todo{
     width: auto;
-    background: #A97C73;
+    background: #E9ECF8;
     margin: auto;
     flex-flow: column nowrap;
     display: flex;
 }
 .cuerpo{
     width: 90%;
-    background: #A97C73;
+    background: #E9ECF8;
     margin: auto;
     display:flex;
     flex-wrap: wrap;
@@ -19,7 +19,7 @@ body{
 }
 
 header{
-    background-color: #140F2D;
+    background-color: #E9ECF8;
     padding-top: 2%;
     padding-bottom: 2%;
 }
@@ -43,7 +43,7 @@ header{
 .caja_texto{
     display:flex;
     border-style: none;
-    background: #A97C73;
+    background: #E9ECF8;
     width: 100%;
     margin: 0 auto;
     font-size: 36px;
@@ -160,9 +160,19 @@ header{
     text-align: center;
     font-size: 0.9em;
     font-style: italic;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 2em;   
     margin-bottom: 1em;
+    display:flex;
+    flex-direction: column;
+
+}
+.iconos_footer{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
 }
 
 @media screen and (max-width:768px){
