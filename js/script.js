@@ -102,6 +102,14 @@ function validar(cadena){
 
 function copiar() {
     let copyText = document.querySelector(".texto_encriptado").innerHTML;
-    navigator.clipboard.writeText(copyText);
-    alert("Resultado copiado con éxito!");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard
+      .writeText(copyText.value)
+      .then(() => {
+        alert("successfully copied");
+      })
+      .catch(() => {
+        alert("something went wrong");
+      });
 }
